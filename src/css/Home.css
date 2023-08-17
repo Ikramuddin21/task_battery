@@ -1,0 +1,41 @@
+.home h1 {
+    color: #555454;
+    font-size: 35px;
+}
+.form {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form_input, .form_button {
+    width: 95%;
+    height: 40px;
+    border-radius: 5px;
+    border: 0;
+    padding: 0;
+    padding-left: 10px;
+    font-size: 15px;
+    outline: 1px solid lightgray;
+    transition: 0.1s;
+}
+
+.form_input:focus {
+    outline: 3px solid rgba(75, 93, 227, 0.347);
+}
+
+.form_input:not(:first-child) {
+    margin-top: 25px;
+}
+
+.form_button {
+    width: 97%;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+/* project form value */
+.project_form_value {
+margin-top: 60px;
+margin-bottom: 60px;
+}
