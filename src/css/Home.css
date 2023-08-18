@@ -16,6 +16,7 @@
     padding: 0;
     padding-left: 10px;
     font-size: 15px;
+    color: gray;
     outline: 1px solid lightgray;
     transition: 0.1s;
 }
@@ -28,6 +29,12 @@
     margin-top: 25px;
 }
 
+.form_err {
+    color: red;
+    margin: 0;
+    margin-top: 5px;
+}
+
 .form_button {
     width: 97%;
     margin-top: 25px;
@@ -38,4 +45,9 @@
 .project_form_value {
 margin-top: 60px;
 margin-bottom: 60px;
+}
+
+/* csv form */
+.csv_form {
+    margin-bottom: 60px;
 }

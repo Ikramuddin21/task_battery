@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const ProjectForm = ({ setInputValue }) => {
+const CSVFile = () => {
   const {
     register,
     reset,
@@ -10,45 +10,55 @@ const ProjectForm = ({ setInputValue }) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    // console.log(data);
-    setInputValue(data);
+    console.log(data);
     reset();
   };
 
   const inputFields = [
     {
-      name: "project_name",
-      errMessage: "Project Name is required",
-      placeholder: "Enter Project Name",
+      name: "max_x",
+      errMessage: "Max X is required",
+      placeholder: "Max X",
     },
     {
-      name: "project_description",
-      // errMessage: "Project Description is required",
-      placeholder: "Enter Project Description",
+      name: "min_x",
+      errMessage: "Min X is required",
+      placeholder: "Min X",
     },
     {
-      name: "client",
-      errMessage: "Client is required",
-      placeholder: "Enter Your Client",
+      name: "max_y",
+      errMessage: "Max Y is required",
+      placeholder: "Max Y",
     },
     {
-      name: "contractor",
-      errMessage: "Contractor is required",
-      placeholder: "Enter Contractor",
+      name: "min_y",
+      errMessage: "Min Y is required",
+      placeholder: "Min Y",
+    },
+    {
+      name: "max_z",
+      errMessage: "Max Z is required",
+      placeholder: "Max Z",
+    },
+    {
+      name: "min_Z",
+      errMessage: "Min Z is required",
+      placeholder: "Min Z",
     },
   ];
 
   return (
-    <div className="project_form">
-      <h1>Project Form</h1>
+    <div className="csv_form">
+      <h1>CSV File to input</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="form">
+        <input type="submit" className="form_button" value="File Upload" />
         {inputFields.map(
           ({ name = "", errMessage = "", placeholder }, index) => (
             <>
               <input
-                key={`${index}-project`}
+                key={`${index}-csv`}
                 className="form_input"
-                type="text"
+                type="number"
                 placeholder={placeholder}
                 {...register(name, {
                   required: errMessage ?? false,
@@ -63,10 +73,9 @@ const ProjectForm = ({ setInputValue }) => {
             </>
           )
         )}
-        <input type="submit" className="form_button" />
       </form>
     </div>
   );
 };
 
-export default ProjectForm;
+export default CSVFile;
