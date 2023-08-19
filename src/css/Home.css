@@ -44,10 +44,28 @@
 /* project form value */
 .project_form_value {
 margin-top: 60px;
-margin-bottom: 60px;
 }
 
 /* csv form */
 .csv_form {
+    margin-top: 60px;
     margin-bottom: 60px;
+}
+
+.csv_file_upload_label {
+    width: 97%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: gray;
+    background-color: #F0F0F0;
+    text-align: center;
+    outline: 1px solid lightgray;
+}
+
+.csv_file_input_field_area .form_input {
+    
 }

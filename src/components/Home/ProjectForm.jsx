@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useForm } from "react-hook-form";
+import { project_form_inputFields } from "../../helper";
 
 const ProjectForm = ({ setInputValue }) => {
   const {
@@ -9,44 +10,20 @@ const ProjectForm = ({ setInputValue }) => {
     handleSubmit,
   } = useForm();
 
-  const onSubmit = (data) => {
+  const handleProjectFormValue = (data) => {
     // console.log(data);
     setInputValue(data);
     reset();
   };
 
-  const inputFields = [
-    {
-      name: "project_name",
-      errMessage: "Project Name is required",
-      placeholder: "Enter Project Name",
-    },
-    {
-      name: "project_description",
-      // errMessage: "Project Description is required",
-      placeholder: "Enter Project Description",
-    },
-    {
-      name: "client",
-      errMessage: "Client is required",
-      placeholder: "Enter Your Client",
-    },
-    {
-      name: "contractor",
-      errMessage: "Contractor is required",
-      placeholder: "Enter Contractor",
-    },
-  ];
-
   return (
     <div className="project_form">
       <h1>Project Form</h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="form">
-        {inputFields.map(
+      <form onSubmit={handleSubmit(handleProjectFormValue)} className="form">
+        {project_form_inputFields.map(
           ({ name = "", errMessage = "", placeholder }, index) => (
-            <>
+            <Fragment key={`${index}-project`}>
               <input
-                key={`${index}-project`}
                 className="form_input"
                 type="text"
                 placeholder={placeholder}
@@ -60,7 +37,7 @@ const ProjectForm = ({ setInputValue }) => {
                   {errors[name].message}
                 </p>
               )}
-            </>
+            </Fragment>
           )
         )}
         <input type="submit" className="form_button" />

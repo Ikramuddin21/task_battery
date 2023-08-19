@@ -11,12 +11,18 @@ const Home = () => {
     client: "",
     contractor: "",
   });
-  console.log("inputValue", inputValue);
 
   return (
     <div className="home">
       <ProjectForm setInputValue={setInputValue} />
-      <ProjectFormValue inputValue={inputValue} setInputValue={setInputValue} />
+
+      {!!inputValue.project_name && (
+        <ProjectFormValue
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+        />
+      )}
+
       <CSVFile />
     </div>
   );
