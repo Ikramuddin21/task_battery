@@ -1,10 +1,21 @@
+.home {
+    margin-top: 60px;
+}
+
+.project_form_value_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
 .home h1 {
     color: #555454;
     font-size: 35px;
+    margin: 0;
 }
 .form {
-    max-width: 500px;
-    width: 100%;
+    width: 500px;
     margin-top: 30px;
 }
 
@@ -42,9 +53,9 @@
 }
 
 /* project form value */
-.project_form_value {
+/* .project_form_value {
 margin-top: 60px;
-}
+} */
 
 /* csv form */
 .csv_form {
@@ -57,8 +68,10 @@ margin-top: 60px;
     height: 40px;
     border-radius: 5px;
     font-size: 15px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     cursor: pointer;
     color: gray;
     background-color: #F0F0F0;
@@ -66,6 +79,10 @@ margin-top: 60px;
     outline: 1px solid lightgray;
 }
 
+.csv_file_input_field_area {
+    margin-top: 25px;
+}
+
 .csv_file_input_field_area .form_input {
-    
+    margin-top: 5px;
 }

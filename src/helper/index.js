@@ -6,7 +6,7 @@ export const project_form_inputFields = [
   },
   {
     name: "project_description",
-    // errMessage: "Project Description is required",
+    errMessage: "Project Description is required",
     placeholder: "Enter Project Description",
   },
   {

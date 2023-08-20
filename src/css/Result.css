@@ -1,0 +1,23 @@
+.result {
+    margin-top: 60px;
+    display: grid;
+    place-items: center;
+    overflow-x: auto !important;
+}
+
+.result table {
+    margin-bottom: 30px;
+    border-collapse: collapse;
+}
+
+tr,th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.download_btn {
+    color: gray;
+    border: 0;
+    outline: 0 !important;
+    background-color: lightgray;
+}

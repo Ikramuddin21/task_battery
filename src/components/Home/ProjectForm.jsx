@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { useForm } from "react-hook-form";
 import { project_form_inputFields } from "../../helper";
 
-const ProjectForm = ({ setInputValue }) => {
+const ProjectForm = ({ setInputValue, setAllInputValue }) => {
   const {
     register,
     reset,
@@ -11,8 +11,8 @@ const ProjectForm = ({ setInputValue }) => {
   } = useForm();
 
   const handleProjectFormValue = (data) => {
-    // console.log(data);
     setInputValue(data);
+    setAllInputValue((prev) => ({ ...prev, ...data }));
     reset();
   };
 
