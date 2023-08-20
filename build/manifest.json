@@ -1,0 +1,31 @@
+{
+  "index.css": {
+    "file": "assets/index-aca6567f.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "css": [
+      "assets/index-aca6567f.css"
+    ],
+    "dynamicImports": [
+      "node_modules/dompurify/dist/purify.es.js",
+      "node_modules/canvg/lib/index.es.js"
+    ],
+    "file": "assets/index-1ab47f76.js",
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "node_modules/canvg/lib/index.es.js": {
+    "file": "assets/index.es-4aad5d3d.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "node_modules/canvg/lib/index.es.js"
+  },
+  "node_modules/dompurify/dist/purify.es.js": {
+    "file": "assets/purify.es-cf254a40.js",
+    "isDynamicEntry": true,
+    "src": "node_modules/dompurify/dist/purify.es.js"
+  }
+}
